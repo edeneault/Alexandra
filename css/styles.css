@@ -16,8 +16,8 @@
 .jumbotron {
   margin: 0 auto;
   padding: 70px 30px;
-  background: #9575CD;
-  color: floralwhite; }
+  background-color: #FFFFFF;
+}
 
 .address {
   font-size: 80%;
@@ -26,10 +26,17 @@
 
 .body {
   padding: 50px 0 0;
-  z-index: 0; }
+  z-index: 0;
+  color: white; }
 
-.navbar-dark {
-  background-color: #512DA8; }
+.navbar-light{
+  background-color: rgba(0,0,0,0.0);
+  color: #FFFFFF;
+}
+
+/* .nav-link {
+  color: black;
+} */
 
 .tab-content {
   border-left: 1px solid #ddd;
@@ -57,6 +64,77 @@
 .close {
   color: floralwhite;
   opacity: 1; }
+
+@import "compass/css3";
+
+
+.menu {
+  cursor: pointer;
+  margin: 0 auto;
+  padding-left: 1.25em;
+  position: relative;
+  width: 30px;
+  height: 30px;
+
+}
+
+.menu-global {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  left: 0;
+  border-top: 4px solid #666666;
+  width: 90%;
+  -webkit-transition: 0.55s;
+  transition: 0.55s;
+}
+
+.menu-top {
+  top: 0;
+}
+
+.menu-middle {
+  top: 7px;
+}
+
+.menu-bottom {
+  top: 14px;
+}
+
+.menu-top-click {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  top: 8px;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+  -webkit-transition: 0.55s 0.5s;
+  transition: 0.55s 0.5s;
+
+}
+
+.menu-middle-click {
+  opacity: 0;
+
+}
+
+.menu-bottom-click {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  top: 8px;
+  -webkit-transform: rotate(-410deg);
+          transform: rotate(-410deg);
+  -webkit-transition: 0.55s 0.5s;
+  transition: 0.55s 0.5s;
+
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 
 #carouselButton {
   right: 0;
