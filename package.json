@@ -1,7 +1,7 @@
 {
-  "name": "confusion",
+  "name": "alexandra",
   "version": "1.0.0",
-  "description": "This is a website for Ristorante Con Fusion",
+  "description": "Alexandra Portfolio",
   "main": "index.html",
   "scripts": {
     "start": "npm run watch:all",
@@ -49,7 +49,8 @@
     "onchange": "^3.3.0",
     "parallelshell": "^3.0.2",
     "rimraf": "^2.6.2",
-    "time-grunt": "^1.4.0"
+    "time-grunt": "^1.4.0",
+    "usemin-cli": "^0.6.0"
   },
   "dependencies": {
     "bootstrap": "^4.5.2",

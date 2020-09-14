@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#mycarousel").carousel( { interval: 2000 } );
+    $("#mycarousel").carousel( { interval: 5000 } );
     $("#carouselButton").click(function(){
         if ($("#carouselButton").children("span").hasClass('fa-pause')) {
             $("#mycarousel").carousel('pause');
@@ -67,4 +67,5 @@ $(document).ready(function() {
   };
 
   Menu.init();
+
   });

@@ -5,6 +5,34 @@ $background-pale: #D1C4E9;
 $background-transparent: rgba(0,0,0,0.0);
 // Height variables
 $carousel-item-height: 300px;
+$carousel-caption-color: #666666;
+$carousel-control-color: #000;
+
+$grid-columns:      12;
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 1200px,
+  // Extra large screen / wide desktop
+  xl: 1600px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1140px,
+  xl: 1540px
+);
+
+
+
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
   margin: 0 auto;
   padding: $pad-up-dn $pad-left-right;
@@ -28,33 +56,32 @@ $carousel-item-height: 300px;
 
 .jumbotron {
   @include zero-margin(70px,30px);
-  background: $background-light;
+  background: $background-transparent;
   color: black;
 }
 
-.address {
+address {
   font-size: 80%;
   margin: 0;
   color: #0f0f0f;
 }
 
-.body {
-  padding: 50px 0 0;
+body {
+  @include zero-margin(0px,0px);
+  padding: 10px 0 0;
   z-index: 0;
-  color: white;
+  color: #666666;
 }
 
 // .navbar-dark {
 //   background-color: $background-dark;
 // }
 
-.navbar-light {
-   border-width: 0px;
-   -webkit-box-shadow: 0px 0px;
-   box-shadow: 0px 0px;
-   background: $background-transparent;
-   color: #FFFFFF;
- }
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.1);
+    background-color: $background-dark;
+}
 
  .nav-link {
    color: black;
@@ -68,18 +95,22 @@ $carousel-item-height: 300px;
 }
 
 .carousel {
-  background: $background-dark;
+  background: $background-transparent;
 
   .carousel-item {
     height: $carousel-item-height;
-
     img {
       position: absolute;
       top: 0;
       left: 0;
       min-height: 300px;
     }
-
+  }
+  .carousel-caption {
+    color: $carousel-caption-color;
+  }
+  .carousel-control-color {
+    color: $carousel-control-color;
   }
 }
 
@@ -108,48 +139,45 @@ $carousel-item-height: 300px;
   padding-left: 1.25em;
   position: relative;
   width: 40px;
-  height: 40px;
+  height: 40px; }
 
-}
 .menu-global {
   backface-visibility: hidden;
   position: absolute;
   left: 0;
-  border-top: 7px solid #FFFFFF;
+  border-top: 7px solid #666666;
   width: 100%;
-  transition: 0.55s;
-}
+  transition: 0.55s; }
+
 .menu-top {
-  top: 0;
-}
+  top: 0; }
+
 .menu-middle {
-  top: 18px;
-}
+  top: 18px; }
+
 .menu-bottom {
-  top: 36px;
-}
+  top: 36px; }
+
 .menu-top-click {
   backface-visibility: hidden;
   top: 15px;
   transform: rotate(50deg);
-  transition: 0.55s 0.5s;
-}
+  transition: 0.55s 0.5s; }
+
 .menu-middle-click {
-  opacity: 0;
-}
+  opacity: 0; }
+
 .menu-bottom-click {
   backface-visibility: hidden;
   top: 15px;
   transform: rotate(-410deg);
-  transition: 0.55s 0.5s;
-}
+  transition: 0.55s 0.5s; }
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
-    outline: none;
-    box-shadow: none;
-}
+  outline: none;
+  box-shadow: none; }
 
 #modalLogin {
   right: 0;
