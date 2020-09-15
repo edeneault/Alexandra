@@ -19,9 +19,7 @@ $(document).ready(function() {
     $("#loginModal").modal("show");
     $("#loginClose").click(function() {
     $("#loginModal").modal("hide");
-    $("#loginCancel").click(function() {
-    $("#loginModal").modal("hide");
-    });
+  
   });
 });
 });

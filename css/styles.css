@@ -10,14 +10,14 @@
   min-height: 400px; }
 
 .footer {
-  background-color: #D1C4E9;
+  background-color: #ddd;
   margin: 0 auto;
   padding: 20px 0; }
 
 .jumbotron {
   margin: 0 auto;
   padding: 70px 30px;
-  background: rgba(0,0,0,0);
+  background: rgba(0, 0, 0, 0);
   color: black; }
 
 address {
@@ -30,39 +30,37 @@ body {
   padding: 0px 0px;
   padding: 10px 0 0;
   z-index: 0;
-  color: #666666;
- }
+  color: #666666; }
 
-/* body, html {
-  height: 100%;
-} */
 .bg {
-
   /* The image used */
   background-image: url("/img/rightjustifytest_1.png");
-
   /* Half height */
   height: 100%;
   width: 100%;
-
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-}
+  background-size: contain; }
+
+.navbar-toggler {
+  color: white;
+  border-color: rgba(0, 0, 0, 0); }
 
 .nav-link {
   color: #666666; }
 
-.navbar-light {
-  background-color: #FFFFFF;
-}
+.nav-link:hover, .nav-link:focus, .nav-link:active, .nav-link.active, .open > .dropdown-toggle.nav-link {
+  color: #000;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  /*set the color you want here*/ }
 
-.navbar-light .navbar-toggler {
-  color: white;
-  border-color: rgba(0,0,0,0);
-
-}
+.navbar-text:hover, .navbar-text:focus, .navbar-text:active, .navbar-text.active, .open > .dropdown-toggle.navbar-text {
+  color: #000;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  /*set the color you want here*/ }
 
 .tab-content {
   border-left: 1px solid #ddd;
@@ -71,73 +69,75 @@ body {
   padding: 10px; }
 
 .carousel {
-  background: rgba(0,0,0,0); }
-
+  background: rgba(0, 0, 0, 0); }
   .carousel .carousel-item {
-    height: 440px;
-    color: #000;
-   }
-  .carousel .carousel-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 300px; }
+    height: 450px; }
+    .carousel .carousel-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 300px; }
 
-  .carousel-caption {
-    color: #666666;
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-height: 200px;
-  }
-  .carousel-caption h2 {
-    color: #000;
-  }
-  .carousel .carousel-indicators li {
-      background-color: #444;
-    }
-  .carousel .carousel-indicators ol {
-      margin-bottom:0
-    }
+.carousel-caption {
+  color: #666666;
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-height: 200px;
+  font-style: italic; }
 
-  .carousel .carousel-indicators .active {
-    background-color: #000;
-  }
+.carousel-caption h2 {
+  color: #000;
+  font-style: normal; }
 
-  #mycarousel {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
+.carousel .carousel-indicators li {
+  background-color: #444; }
 
+.carousel .carousel-indicators ol {
+  margin-bottom: 0; }
 
-  #carouselButton {
-    right: 0;
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
-    background-color: rgba(0,0,0,0);
+.carousel .carousel-indicators .active {
+  background-color: #000; }
 
+.carousel-control-color {
+  color: #000; }
 
-  }
+#mycarousel {
+  margin-left: 0px;
+  margin-right: 0px;
+  color: black; }
+
+#carouselButton {
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0); }
 
 .modal-header {
-  background-color: #512DA8;
+  background-color: #666666;
   color: floralwhite; }
 
 .modal-body {
-  background-color: #D1C4E9; }
+  background-color: #ddd; }
 
 .close {
   color: floralwhite;
   opacity: 1; }
+
+.close:hover, .close:focus, .close:active, .close.active, .open > .dropdown-toggle.close {
+  color: #ddd;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  /*set the color you want here*/ }
 
 .menu {
   cursor: pointer;
   margin: 0 auto;
   padding-left: 1.25em;
   position: relative;
-  width: 20px;
-  height: 20px; }
+  width: 15px;
+  height: 15px; }
 
 .menu-global {
   backface-visibility: hidden;
@@ -158,7 +158,7 @@ body {
 
 .menu-top-click {
   backface-visibility: hidden;
-  top: 15px;
+  top: 10px;
   transform: rotate(50deg);
   transition: 0.55s 0.5s; }
 
@@ -167,7 +167,7 @@ body {
 
 .menu-bottom-click {
   backface-visibility: hidden;
-  top: 15px;
+  top: 10px;
   transform: rotate(-410deg);
   transition: 0.55s 0.5s; }
 
@@ -176,3 +176,9 @@ body {
 .navbar-toggler-icon:focus {
   outline: none;
   box-shadow: none; }
+
+#modalLogin {
+  right: 0%;
+  position: relative;
+  bottom: 0%;
+  z-index: 1; }

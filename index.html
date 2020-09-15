@@ -20,18 +20,22 @@
 
   <body>
     <div class="bg">
-    <nav class="navbar navbar-light expand fixed-top">
+
+<!-- NAVIGATION -->
+
+    <nav class="navbar expand fixed-top">
       <div class="container">
-        <button id="slide" class="navbar-toggler "  type="button"  data-toggle="collapse" data-target="#Navbar">
+
+        <button id="slide" class="navbar-toggler"  type="button"  data-toggle="collapse" data-target="#Navbar">
           <div class="menu">
               <span class="menu-global menu-top"></span>
               <span class="menu-global menu-middle"></span>
               <span class="menu-global menu-bottom"></span>
             </div>
         </button>
-        <!-- <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a> -->
-        <div class="collapse navbar-expand"  id="Navbar">
-          <ul class="navbar-nav">
+
+        <div class="collapse navbar-expand mx-auto"  id="Navbar">
+          <ul class="navbar-nav  ">
 
             <li class="nav-item active"><a class="nav-link" href="#"> Home</a></li>
             <li class="nav-item"><a class="nav-link" href="./aboutus.html"> About</a></li>
@@ -39,13 +43,16 @@
             <li class="nav-item"><a class="nav-link" href="./classes.html"> Classes</a></li>
             <li class="nav-item"><a class="nav-link" href="./contactus.html"></span> Contact</a></li>
           </ul>
+
+          </div>
+          <div class="navbar-text navbar-expand col col-sm-2" >
+            <a id="modalLogin" >
+              <span  class="fa fa-sign-in"></span> Login</a>
+          </div>
         </div>
-        <div class="navbar-text navbar-expand" >
-          <a id="modalLogin" >
-            <span  class="fa fa-sign-in"></span> Login</a>
-        </div>
-      </div>
     </nav>
+
+<!-- LOGIN MODAL -->
 
     <div id="loginModal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
@@ -75,14 +82,15 @@
                 </div>
               </div>
               <div class="form-row">
-                <button id="loginCancel" type="button" class="btn btn-secondary btn-sm ml-auto">Cancel</button>
-                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                <button type="submit" class="btn btn-danger btn-sm col col-sm-2 offset-10 ">Sign in</button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
+
+<!-- RESERVATION MODAL -->
 
     <div id="reservationModal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
@@ -167,7 +175,7 @@
       </div>
     </div>
 
-
+<!-- JUMBOTRON -->
 
     <header class="jumbotron">
 
@@ -176,27 +184,7 @@
           <div class="col col-sm">
             <div id="mycarousel" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner" role="listbox">
-                <div class="carousel-item ">
-                  <img class="d-block img-fluid" src="img/uthappizza.png" alt="Uthappizza">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default">$4.99</span></h2>
-                    <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
-                      Italian pizza, topped with Cerignola olives, ripe vine
-                      cherry tomatoes, Vidalia onion, Guntur chillies and
-                      Buffalo Paneer.</p>
-                  </div>
-                </div>
 
-                <div class="carousel-item">
-                  <img class="d-block img-fluid" src="img/buffet.png" alt="Weekend Grand Buffet">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW </span></h2>
-                    <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads,
-                      six enticing appetizers, six main entrees and five choicest desserts.
-                      Free flowing bubbly and soft drinks. All for just $19.99 per
-                      person </p>
-                  </div>
-                </div>
                 <div class="carousel-item active">
                   <img class="d-block img-fluid" src="img/alex_headshot-square_400px.png" alt="Alexandra Apjarova">
                   <div class="carousel-caption text-left font-italic font-weight-light d-none d-md-block  col col-md-6 offset-3">
@@ -205,6 +193,29 @@
                     <h4 class="d-none d-sm-block">" ... I am a performing artist.  I am a dancer, aerialist, teacher and actress.  I love to be on-stage and reach out for the audience with full authenticity ... "</p>
                   </div>
                 </div>
+
+                <div class="carousel-item ">
+                  <img class="d-block img-fluid"src="img/alex_fitness-square_400px.png" alt="Uthappizza">
+                  <div class="carousel-caption d-none d-md-block col col-md-10"  style="top: 65%" >
+                    <h2>Online Class Daily <span class="badge badge-danger">ENERGIZE YOURSELF</span></h2>
+                  </div>
+                <div class="carousel-caption d-none d-md-block col col-md-4 offset-3"style="top: 10%">
+                    <h4 class="d-none d-sm-block">... is it possible to be the best version of yourself?  Yes it is! Train with me!
+                        I like to feel strong, flexible and sexy!  All of my classes incorporate dance fusion movements ...</h4>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="img/alex_silkcabaret_pics_400px_758px.png" alt="Weekend Grand Buffet">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW </span></h2>
+                    <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads,
+                      six enticing appetizers, six main entrees and five choicest desserts.
+                      Free flowing bubbly and soft drinks. All for just $19.99 per
+                      person </p>
+                  </div>
+                </div>
+
                 <ol class="carousel-indicators align-self-center">
                   <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
                   <li data-target="#mycarousel" data-slide-to="1"></li>
