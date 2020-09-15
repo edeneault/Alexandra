@@ -43,6 +43,9 @@ body {
   background-repeat: no-repeat;
   background-size: contain; }
 
+.navbar {
+  background-image: linear-gradient(to bottom, white, 90%, rgba(255, 255, 255, 0)); }
+
 .navbar-toggler {
   color: white;
   border-color: rgba(0, 0, 0, 0); }

@@ -67,6 +67,11 @@ body {
   background-size: contain;
 }
 
+.navbar {
+  // background-color: $background-light;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,1), 90%, rgba(255,255,255,0));
+}
+
 .navbar-toggler {
   color: white;
   border-color: rgba(0,0,0,0);

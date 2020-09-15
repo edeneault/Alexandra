@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#mycarousel").carousel( { interval: 5000 } );
+    $("#mycarousel").carousel( { interval: 10000 } );
     $("#carouselButton").click(function(){
         if ($("#carouselButton").children("span").hasClass('fa-pause')) {
             $("#mycarousel").carousel('pause');
@@ -19,7 +19,7 @@ $(document).ready(function() {
     $("#loginModal").modal("show");
     $("#loginClose").click(function() {
     $("#loginModal").modal("hide");
-  
+
   });
 });
 });
