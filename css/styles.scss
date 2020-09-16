@@ -157,6 +157,9 @@ body {
   z-index: 1;
   background-color: rgba(0,0,0,0);
 }
+#carouseldarkbg {
+  color: $background-light;
+}
 
 .modal-header {
   background-color: $background-dark;

@@ -117,6 +117,9 @@ body {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0); }
 
+#carouseldarkbg {
+  color: #FFFFFF; }
+
 .modal-header {
   background-color: #666666;
   color: floralwhite; }
