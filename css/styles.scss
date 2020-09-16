@@ -19,11 +19,11 @@ $grid-gutter-width: 30px;
 
 .row-header {
   background: $background-transparent;
-  @include zero-margin(0px,0px);
+  @include zero-margin(20px,0px);
 }
 
 .row-content {
-  @include zero-margin(50px,0px);
+  @include zero-margin(30px,0px);
   border-bottom: 1px ridge;
   min-height: 400px;
 }
@@ -34,7 +34,7 @@ $grid-gutter-width: 30px;
 }
 
 .jumbotron {
-  @include zero-margin(70px,30px);
+  @include zero-margin(50px,30px);
   background: $background-transparent;
   color: black;
 }
@@ -77,8 +77,11 @@ body {
   border-color: rgba(0,0,0,0);
 }
 
-.nav-link {
-   color: #666666;
+
+.nav-link  {
+    @include zero-margin(0px,0px);
+    padding: 0px, 0px,0px,0px;
+     color: #666666;
 }
 .nav-link:hover, .nav-link:focus, .nav-link:active, .nav-link.active, .open>.dropdown-toggle.nav-link {
     color: #000;
@@ -247,6 +250,7 @@ body {
 .breadcrumb-item + .breadcrumb-item::before {
   font-family: 'FontAwesome';
   content: "\f101" !important;
+  padding-top: 3px;
   }
 
 .breadcrumb{
@@ -264,7 +268,8 @@ body {
 }
 
 .breadcrumb-item:active  a {
-    color: $carousel-control-color;
+    color: $carousel-caption-color;
+    text-decoration: none;
   }
 
 
