@@ -127,6 +127,12 @@ body {
 .modal-body {
   background-color: #ddd; }
 
+#modalLogin {
+  right: 0%;
+  position: relative;
+  bottom: 0%;
+  z-index: 1; }
+
 .close {
   color: floralwhite;
   opacity: 1; }
@@ -183,8 +189,20 @@ body {
   outline: none;
   box-shadow: none; }
 
-#modalLogin {
-  right: 0%;
-  position: relative;
-  bottom: 0%;
-  z-index: 1; }
+.breadcrumb-item + .breadcrumb-item::before {
+  font-family: 'FontAwesome';
+  content: "\f101" !important; }
+
+.breadcrumb {
+  background-color: rgba(0, 0, 0, 0); }
+
+.breadcrumb-item a {
+  color: #000;
+  text-decoration: none; }
+
+.breadcrumb-item:hover a {
+  color: #bbb;
+  text-decoration: none; }
+
+.breadcrumb-item:active a {
+  color: #000; }

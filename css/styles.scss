@@ -163,14 +163,24 @@ body {
 
 .modal-header {
   background-color: $background-dark;
-  color: floralwhite; }
+  color: floralwhite;
+}
 
 .modal-body {
-  background-color: $lt-gray; }
+  background-color: $lt-gray;
+}
+
+#modalLogin {
+  right: 0%;
+  position: relative;
+  bottom: 0%;
+  z-index: 1;
+}
 
 .close {
   color: floralwhite;
-  opacity: 1; }
+  opacity: 1;
+}
 
 .close:hover, .close:focus, .close:active, .close.active, .open>.dropdown-toggle.close {
     color: $lt-gray;
@@ -185,7 +195,8 @@ body {
   padding-left: 1.25em;
   position: relative;
   width: 15px;
-  height: 15px; }
+  height: 15px;
+}
 
 .menu-global {
   backface-visibility: hidden;
@@ -193,42 +204,75 @@ body {
   left: 0;
   border-top: 4px solid #666666;
   width: 100%;
-  transition: 0.55s; }
+  transition: 0.55s;
+}
 
 .menu-top {
-  top: 0; }
+  top: 0;
+}
 
 .menu-middle {
-  top: 9px; }
+  top: 9px;
+}
 
 .menu-bottom {
-  top: 18px; }
+  top: 18px;
+}
 
 .menu-top-click {
   backface-visibility: hidden;
   top: 10px;
   transform: rotate(50deg);
-  transition: 0.55s 0.5s; }
+  transition: 0.55s 0.5s;
+}
 
 .menu-middle-click {
-  opacity: 0; }
+  opacity: 0;
+}
 
 .menu-bottom-click {
   backface-visibility: hidden;
   top: 10px;
   transform: rotate(-410deg);
-  transition: 0.55s 0.5s; }
+  transition: 0.55s 0.5s;
+}
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
   outline: none;
-  box-shadow: none; }
-
-
-#modalLogin {
-  right: 0%;
-  position: relative;
-  bottom: 0%;
-  z-index: 1;
+  box-shadow: none;
 }
+
+.breadcrumb-item + .breadcrumb-item::before {
+  font-family: 'FontAwesome';
+  content: "\f101" !important;
+  }
+
+.breadcrumb{
+  background-color: $background-transparent;
+}
+
+.breadcrumb-item a {
+  color: $carousel-control-color;
+  text-decoration: none;
+}
+
+.breadcrumb-item:hover a {
+   color:  #bbb;
+   text-decoration: none;
+}
+
+.breadcrumb-item:active  a {
+    color: $carousel-control-color;
+  }
+
+
+// .breadcrumb:active {
+//   color: $background-dark;
+// }
+// // .breadcrumb:focus, .breadcrumb:active, .breadcrumb.active, .open>.dropdown-toggle.breadcrumb
+//  .breadcrumb:active, .breadcrumb.active {
+//     color: $background-dark;
+//  }
+//
