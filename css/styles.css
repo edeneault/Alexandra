@@ -10,15 +10,14 @@
   min-height: 400px; }
 
 .footer {
-  background-color: #ddd;
   margin: 0 auto;
-  padding: 20px 0; }
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0); }
 
 .jumbotron {
   margin: 0 auto;
-  padding: 50px 30px;
-  background: rgba(0, 0, 0, 0);
-  color: black; }
+  padding: 50px 0px;
+  background: rgba(0, 0, 0, 0); }
 
 address {
   font-size: 80%;
@@ -32,18 +31,24 @@ body {
   z-index: 0;
   color: #666666; }
 
-.bg {
-  /* The image used */
-  background-image: url("/img/rightjustifytest_1.png");
-  /* Half height */
-  height: 100%;
+.card {
   width: 100%;
-  /* Center and scale the image nicely */
-  background-position: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 0px; }
+
+.bg {
+  padding-bottom: 350px;
+  background-image: linear-gradient(to top, white, 5%, rgba(255, 255, 255, 0)), url("/img/rightjustifytest_1.png");
+  background-color: rgba(0, 0, 0, 0);
+  background-position: bottom;
+  /* Center the image */
   background-repeat: no-repeat;
-  background-size: contain; }
+  /* Do not repeat the image */
+  background-size: cover; }
 
 .navbar {
+  min-height: 50px;
   background-image: linear-gradient(to bottom, white, 90%, rgba(255, 255, 255, 0)); }
 
 .navbar-toggler {
@@ -131,7 +136,7 @@ body {
   background-color: #ddd; }
 
 #modalLogin {
-  right: 0%;
+  right: 25%;
   position: relative;
   bottom: 0%;
   z-index: 1; }
