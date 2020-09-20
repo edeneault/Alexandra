@@ -1,6 +1,6 @@
 $lt-gray: rgba(0,0,0,0.40);
 $background-dark: rgba(0,0,0,0.80);
-$background-light: rgba(255,255,255,1.0);
+$background-light: rgba(0,0,0,0.0);
 $background-pale: rgba(0,0,0,0.60);
 $background-transparent: rgba(0,0,0,0.0);
 // Height variables
@@ -89,12 +89,6 @@ body {
     border-color: $background-transparent;
     background-color: $background-transparent;
   }
-  p {
-      color: $background-dark;
-      font-size: 14px;
-      padding-bottom: 10px;
-
-  }
   }
 
 
@@ -153,17 +147,11 @@ body {
 
 .navbar-text {
   background-color: $background-transparent;
-
+  border-color: $carousel-caption-color; /*set the color you want here*/
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  border: 0px;
-  button {
-    margin: 0px;
-    border-color: $background-transparent;
-    border: 0px;
-  }
-  // margin-bottom:10px;
+  margin-bottom:10px;
 }
 
 
@@ -186,25 +174,6 @@ body {
       min-height: 300px;
       border: 1px solid #666666;
       border-radius: 10px;
-    }
-    h2{
-        text-transform: uppercase;
-        font-size: 22px;
-    }
-    h4{
-
-        color: $carousel-control-color;
-        font-size: 20px;
-    }
-    h6{
-        text-transform: uppercase;
-        color: $carousel-caption-color;
-        font-size: 18px;
-    }
-    span{
-        text-transform: uppercase;
-        color: $background-light;
-        font-size: 24px;
     }
   }
 }
@@ -264,22 +233,21 @@ body {
 // }
 
 #modalLogin {
-  right: 8%;
-  // top: 3%;
+  right: 17%;
   position: relative;
   z-index: 1;
 }
 
-// .modal-dialog {
-//   min-height: calc(100vh - 60px);
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   overflow: auto;
-//   @media(max-width: 400px) {
-//     min-height: calc(100vh - 20px);
-//   }
-// }
+.modal-dialog {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: auto;
+  @media(max-width: 400px) {
+    min-height: calc(100vh - 20px);
+  }
+}
 
 .modal-backdrop {
     /* bug fix - no overlay */
@@ -393,321 +361,4 @@ body {
 
 @media (min-width: 768px) {
 	.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
-}
-
-// GALLERY CSS
-.gallery-block{
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.gallery-block .heading{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.gallery-block .heading h2{
-    color: $background-dark;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-.gallery-block .heading h4{
-    color: $background-dark;
-    font-size: 14px;
-    text-transform: uppercase;
-}
-.gallery-block .heading h6{
-    color: white;
-    font-size: 16px;
-    text-transform: uppercase;
-    margin-bottom: 0px;
-}
-
-.gallery-block.compact-gallery .item{
-  overflow: hidden;
-  margin-bottom: 0;
-  background: black;
-  opacity: 1;
-}
-
-.gallery-block.compact-gallery .item .image{
-  transition: 0.8s ease;
-
-}
-
-.gallery-block.compact-gallery .item .info{
-  position: relative;
-    display: inline-block;
-}
-
-.gallery-block.compact-gallery .item .video-banner-img{
-  position: relative;
-    display: inline-block;
-}
-
-.gallery-block.compact-gallery .item .description{
-  display: grid;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    color: #fff;
-    padding: 10px;
-    font-size: 17px;
-    line-height: 18px;
-    width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    opacity: 1;
-    color: #fff;
-    transition: 0.8s ease;
-    text-align: center;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.39));
-}
-
-.gallery-block.compact-gallery .item .description .description-heading{
-  font-size: 1em;
-  font-weight: bold;
-}
-
-.gallery-block.compact-gallery .item .description .description-body{
-  font-size: 0.8em;
-  margin-top: 10px;
-  font-weight: 300;
-}
-
-@media (min-width: 576px) {
-
-  .gallery-block.compact-gallery .item .description {
-    opacity: 0;
-  }
-
-  .gallery-block.compact-gallery .item a:hover .description {
-    opacity: 1;
-  }
-
-  .gallery-block .zoom-on-hover:hover .image {
-    transform: scale(1.3);
-    opacity: 0.7;
-  }
-}
-
-
-.video-modal,
-.video-modal .overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3000;
-}
-
-.video-modal {
-  overflow: hidden;
-  position: fixed;
-  opacity: 0;
-
-  -webkit-transform: translate(500%, 0%);
-  transform: translate(500%, 0%);
-
-  -webkit-transition: -webkit-transform 0s linear 0s;
-  transition: transform 0s linear 0s;
-
-  /* using flexbox for vertical centering */
-
-  /* Flexbox display */
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-
-  /* Vertical alignment */
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
-.video-modal .overlay {
-  z-index: 0;
-  // background: rgba(13, 1, 61, 0.82);
-  background: rgba(0, 0, 0, 0.7);
-  /* overlay color */
-
-  opacity: 0;
-
-  -webkit-transition: opacity 0.2s ease-out 0.05s;
-  transition: opacity 0.2s ease-out 0.05s;
-}
-
-.video-modal-content {
-  position: relative;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  z-index: 1;
-
-  margin: 0 auto;
-
-  overflow-y: visible;
-
-  background: #000;
-
-  width: calc(100% - 12em);
-  height: 0;
-  padding-top: calc((100% - 12em) * 0.5625);
-  /* 16:9 calc */
-}
-
-/* Scaling to fit within the current Viewport size:
-   When viewport aspect ratio is greater than 16:9
-   work off the height instead of the width for calc */
-@media (min-aspect-ratio: 16/9) {
-  .video-modal-content {
-    width: 0;
-    height: calc(100vh - 10em);
-    padding-top: 0;
-    padding-left: calc((100vh - 10em) * 1.7778);
-    /* 16:9 calc */
-  }
-}
-
-/* Mobile Layout Tweaks - side margins reduced */
-@media (max-width: 640px) {
-  .video-modal-content {
-    width: calc(100% - 1em);
-    padding-top: calc((100% - 1em) * 0.5625);
-    /* 16:9 calc */
-  }
-}
-
-/* modal close button */
-.close-video-modal {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: -40px;
-
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
-}
-
-/* set the iframe element to stretch to fit its parent element */
-iframe#youtube {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-
-  background: #000;
-  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
-}
-
-/* show the modal:
-   add class to the body to reveal */
-.show-video-modal .video-modal {
-  opacity: 1;
-
-  transform: translate(0%, 0%);
-  -webkit-transform: translate(0%, 0%);
-}
-
-.show-video-modal .video-modal .overlay {
-  opacity: 1;
-}
-
-.show-video-modal .video-modal-content {
-  transform: translate(0%, 0%);
-  -webkit-transform: translate(0%, 0%);
-}
-
-/* PLAY BUTTON OVERLAY */
-.video-gallery {
-  margin-bottom: 25px;
-  // box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
-
-  .video-banner-img {
-    width: 100%;
-    background: $background-pale;
-  }
-
-  .wrapper {
-    position: relative;
-  }
-
-  .video-overlay {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    img {
-      @include zero-margin(0px,0px);
-      position: relative;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-}
-  a:hover {
-    text-decoration: none;
-
-    .video-overlay {
-      visibility: visible;
-      opacity: 1;
-      transition: 0.3s;
-      background: $background-pale;
-
-    }
-  }
-
-  .video-name {
-    font-size: 14px;
-    color: #FFF;
-    padding: 10px;
-  }
-
-  @media (max-width: 767px) {
-    .video-thumb {
-      display: flex;
-
-      .wrapper {
-        // flex-grow: 1;
-        flex-basis: 40%;
-        .video-banner-img {
-          width: 100%;
-        }
-      }
-
-      .video-name {
-        // flex-grow: 3;
-        flex-basis: 60%;
-      }
-    }
-  }
-
-// Optional - For equal height of card for 2 line video name
-  // @media (min-width: 768px) {
-  //   .video-name {
-  //     height: 65px;
-  //   }
-  // }
 }
