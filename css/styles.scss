@@ -40,18 +40,30 @@ $grid-gutter-width: 30px;
 }
 
 
-
 .jumbotron {
-  @include zero-margin(70px,10px);
+  @include zero-margin(50px,30px);
   background: $background-transparent;
-  min-height: 400px;
+  min-height: 430px;
+  padding-bottom: 10px;
   img {
     border: 1px solid $carousel-caption-color;
     border-radius: 10px;
     background-color: $carousel-caption-color;
-
   }
+}
 
+.jumbosmall {
+  margin-top: 60px;
+  margin-bottom: 65px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.jumbosmaller {
+  margin-top: 60px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 address {
@@ -77,21 +89,14 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
 }
-.bg1 {
-  background-image: url("/img/Slide_layer_1.jpg");
-  background-color: $background-transparent;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: auto;
 
-}
 
 #main-img {
   background-image: url("/img/Slide_layer_1.jpg");
   background-color: $background-transparent;
   background-position: top;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   margin-top:70px;
 
 }
@@ -102,26 +107,27 @@ body {
       background-color: $background-transparent;
       background-position: top;
       background-repeat: no-repeat;
-      background-size: auto;
+      background-size: cover;
     }
 }
 
-// @media screen and (min-width: 768px) {
-//     #main-img{
-//     	background-image: url("/img/alex_headshot-square_500px.png");
-//       background-color: $background-transparent;
-//       background-position: top;
-//       background-repeat: no-repeat;
-//       background-size: auto;
-//     }
-// }
+@media screen and (min-width: 768px) {
+    #main-img{
+    	background-image: url("/img/about_bg_medium.png");
+      background-color: $background-transparent;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+}
 @media (min-width: 992px) {
       #main-img{
           background-image: url("/img/Slide_layer_1.jpg");
           background-color: $background-transparent;
           background-position: top;
           background-repeat: no-repeat;
-          background-size: auto;
+          background-size: cover;
+
       }
 }
 // @media (min-width: 1200px) {
@@ -130,6 +136,10 @@ body {
 //      }
 // }
 
+#about {
+  margin-top: 225px;
+
+}
 
 .card {
   color: $carousel-control-color;
@@ -156,6 +166,22 @@ body {
       padding-bottom: 10px;
 
   }
+  h2{
+      color: $background-dark;
+      font-size: 16px;
+      text-transform: uppercase;
+  }
+  h4{
+      color: $background-dark;
+      font-size: 14px;
+      text-transform: uppercase;
+  }
+  h6{
+      color: white;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-bottom: 0px;
+    }
   }
 
 
