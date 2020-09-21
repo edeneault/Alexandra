@@ -40,9 +40,17 @@ $grid-gutter-width: 30px;
 }
 
 
+
 .jumbotron {
   @include zero-margin(70px,10px);
   background: $background-transparent;
+  min-height: 400px;
+  img {
+    border: 1px solid $carousel-caption-color;
+    border-radius: 10px;
+    background-color: $carousel-caption-color;
+
+  }
 
 }
 
@@ -69,6 +77,59 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
 }
+.bg1 {
+  background-image: url("/img/Slide_layer_1.jpg");
+  background-color: $background-transparent;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+}
+
+#main-img {
+  background-image: url("/img/Slide_layer_1.jpg");
+  background-color: $background-transparent;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin-top:70px;
+
+}
+
+@media screen and (max-width: 767px) {
+    #main-img{
+    	background-image: url("/img/alex_headshot-square_400px.png");
+      background-color: $background-transparent;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+}
+
+// @media screen and (min-width: 768px) {
+//     #main-img{
+//     	background-image: url("/img/alex_headshot-square_500px.png");
+//       background-color: $background-transparent;
+//       background-position: top;
+//       background-repeat: no-repeat;
+//       background-size: auto;
+//     }
+// }
+@media (min-width: 992px) {
+      #main-img{
+          background-image: url("/img/Slide_layer_1.jpg");
+          background-color: $background-transparent;
+          background-position: top;
+          background-repeat: no-repeat;
+          background-size: auto;
+      }
+}
+// @media (min-width: 1200px) {
+//      #main-img{
+//          background-image: url("/img/Slide_layer_1.jpg");
+//      }
+// }
+
 
 .card {
   color: $carousel-control-color;
@@ -215,12 +276,20 @@ body {
   right: 0;
   min-height: 200px;
   font-style: italic;
+  .carouseldark h2{
+    color: $background-light;
+  }
+  .carouseldark h4{
+    color: $background-light;
+  }
 }
 
 .carousel-caption h2 {
   color: #000;
   font-style: normal;
 }
+
+
 .carousel .carousel-indicators li {
     background-color: #444;
   }
@@ -235,7 +304,12 @@ body {
 .carousel-control-color {
   color: $carousel-control-color;
 }
-
+.carouseldark h2 {
+  color: $background-light;
+}
+.carouseldark h4 {
+  color: $background-light;
+}
 
 #mycarousel {
   margin-left: 0px;
@@ -402,7 +476,6 @@ body {
 }
 
 .gallery-block .heading{
-    margin-top: 40px;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -423,6 +496,7 @@ body {
     font-size: 16px;
     text-transform: uppercase;
     margin-bottom: 0px;
+
 }
 
 .gallery-block.compact-gallery .item{
