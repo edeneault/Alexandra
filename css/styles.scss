@@ -53,17 +53,22 @@ $grid-gutter-width: 30px;
 }
 
 .jumbosmall {
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 65px;
   font-size: 18px;
   text-transform: uppercase;
+
 }
 
 .jumbosmaller {
-  margin-top: 60px;
-  margin-bottom: 15px;
+  margin-top: 50px;
+  margin-bottom: 30px;
   font-size: 18px;
-  text-transform: uppercase;
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 22px;
+  }
 }
 
 address {
@@ -86,6 +91,17 @@ body {
   url("/img/rightjustifytest_5.png"),;
   background-color: $background-transparent;
   background-position: top;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.bg2{
+  background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)),
+  linear-gradient(to bottom, rgba(255,255,255,1), 50%, rgba(255,255,255,0)),
+  linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)),
+  url("/img/bg2_1.png"),;
+  background-color: $background-transparent;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: auto;
 }
@@ -136,8 +152,50 @@ body {
 //      }
 // }
 
+#bg-classes {
+  background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)),
+  linear-gradient(to bottom, rgba(255,255,255,1), 12%, rgba(255,255,255,0)),
+  linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)),
+  url("/img/Bg_teaching.png"),;
+  background-color: $background-transparent;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: constrain;
+  min-height:375px;
+
+}
+
+@media screen and (max-width: 767px) {
+    #main-img{
+    	background-image: url("/img/alex_headshot-square_400px.png");
+      background-color: $background-transparent;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #main-img{
+    	background-image: url("/img/about_bg_medium.png");
+      background-color: $background-transparent;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+}
+@media (min-width: 992px) {
+      #main-img{
+          background-image: url("/img/Slide_layer_1.jpg");
+          background-color: $background-transparent;
+          background-position: top;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+      }
+}
 #about {
-  margin-top: 225px;
+  margin-top:335px;
 
 }
 
@@ -182,8 +240,12 @@ body {
       text-transform: uppercase;
       margin-bottom: 0px;
     }
+
   }
 
+// #cardborder {
+//     border: 1px solid $carousel-caption-color;
+// }
 
 .style-1 { color: #D9534F; text-decoration:none;}
 .style-1:hover, .style-1:focus,.style-1:active, .style-1.active {
