@@ -66,6 +66,7 @@ $grid-gutter-width: 30px;
   font-size: 18px;
 
   h2 {
+
     text-transform: uppercase;
     font-size: 22px;
   }
@@ -114,12 +115,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin-top:70px;
-
 }
+
 
 @media screen and (max-width: 767px) {
     #main-img{
     	background-image: url("/img/alex_headshot-square_400px.png");
+      background-color: $background-transparent;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #bg-classes{
+      background-image: none;
       background-color: $background-transparent;
       background-position: top;
       background-repeat: no-repeat;
@@ -135,6 +143,13 @@ body {
       background-repeat: no-repeat;
       background-size: cover;
     }
+    #bg-classes{
+      background-image: none;
+      background-color: $background-transparent;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 }
 @media (min-width: 992px) {
       #main-img{
@@ -143,8 +158,30 @@ body {
           background-position: top;
           background-repeat: no-repeat;
           background-size: cover;
+        }
+        #bg-classes{
+            background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)),
+            linear-gradient(to bottom, rgba(255,255,255,1), 0%, rgba(255,255,255,0)),
+            linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)),
+            url("/img/Bg_teaching.png");
+            background-color: $background-transparent;
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
 
-      }
+        }
+        #bg-contact{
+          background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)),
+          linear-gradient(to bottom, rgba(255,255,255,1), 15%, rgba(255,255,255,0)),
+          linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)),
+          url("/img/Bg_contact.png"),;
+          background-color: $background-transparent;
+          background-position: top;
+          background-repeat: no-repeat;
+          background-size: cover;
+  min-height: 500px;
+
+        }
 }
 // @media (min-width: 1200px) {
 //      #main-img{
@@ -160,40 +197,40 @@ body {
   background-color: $background-transparent;
   background-position: top;
   background-repeat: no-repeat;
-  background-size: constrain;
+  background-size: original;
   min-height:375px;
+  // @media screen and (max-width: 767px) {
+  //     #bg-classes{
+  //     	background-image: none;
+  //       background-color: $background-transparent;
+  //       background-position: top;
+  //       background-repeat: no-repeat;
+  //       background-size: cover;
+  //     }
+  // }
+  //
+  // @media screen and (min-width: 768px) {
+  //     #bg-classes{
+  //     	background-image: url("/img/about_bg_medium.png");
+  //       background-color: $background-transparent;
+  //       background-position: top;
+  //       background-repeat: no-repeat;
+  //       background-size: cover;
+  //     }
+  // }
+  // @media (min-width: 992px) {
+  //       #bg-classes{
+  //           background-image: url("/img/Slide_layer_1.jpg");
+  //           background-color: $background-transparent;
+  //           background-position: top;
+  //           background-repeat: no-repeat;
+  //           background-size: cover;
+  //
+  //       }
 
 }
 
-@media screen and (max-width: 767px) {
-    #main-img{
-    	background-image: url("/img/alex_headshot-square_400px.png");
-      background-color: $background-transparent;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-}
 
-@media screen and (min-width: 768px) {
-    #main-img{
-    	background-image: url("/img/about_bg_medium.png");
-      background-color: $background-transparent;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-}
-@media (min-width: 992px) {
-      #main-img{
-          background-image: url("/img/Slide_layer_1.jpg");
-          background-color: $background-transparent;
-          background-position: top;
-          background-repeat: no-repeat;
-          background-size: cover;
-
-      }
-}
 #about {
   margin-top:335px;
 
@@ -225,6 +262,7 @@ body {
 
   }
   h2{
+      padding-top: 5px;
       color: $background-dark;
       font-size: 16px;
       text-transform: uppercase;
@@ -261,9 +299,7 @@ body {
     text-decoration: none;
 }
 
-.badge {
-  background-color: #3599dc;
-}
+
 
 .navbar-light {
   min-height: 50px;
@@ -337,8 +373,8 @@ body {
       border-radius: 10px;
     }
     h2{
-        text-transform: uppercase;
-        font-size: 22px;
+      text-transform: uppercase;
+        font-size: 16px;
     }
     h4{
 
@@ -350,11 +386,13 @@ body {
         color: $carousel-caption-color;
         font-size: 18px;
     }
-    span{
-        text-transform: uppercase;
-        color: $background-light;
-        font-size: 24px;
+    p {
+        color: $background-dark;
+        font-size: 14px;
+        padding-bottom: 10px;
+
     }
+
   }
 }
 .carousel-caption {
@@ -363,7 +401,7 @@ body {
   top: 0;
   right: 0;
   min-height: 200px;
-  font-style: italic;
+
   .carouseldark h2{
     color: $background-light;
   }
@@ -372,10 +410,10 @@ body {
   }
 }
 
-.carousel-caption h2 {
-  color: #000;
-  font-style: normal;
-}
+// .carousel-caption h2 {
+//   color: #000;
+//   font-style: normal;
+// }
 
 
 .carousel .carousel-indicators li {
