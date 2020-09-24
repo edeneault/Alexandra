@@ -89,7 +89,7 @@ body {
   background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)),
   linear-gradient(to bottom, rgba(255,255,255,1), 12%, rgba(255,255,255,0)),
   linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)),
-  url("/img/rightjustifytest_5.png"),;
+  image-url("/img/rightjustifytest_5.png"),;
   background-color: $background-transparent;
   background-position: top;
   background-repeat: no-repeat;
@@ -100,7 +100,7 @@ body {
   background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)),
   linear-gradient(to bottom, rgba(255,255,255,1), 50%, rgba(255,255,255,0)),
   linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)),
-  url("/img/bg2_1.png"),;
+  image-url("/img/bg2_1.png"),;
   background-color: $background-transparent;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -109,7 +109,7 @@ body {
 
 
 #main-img {
-  background-image: url("/img/Slide_layer_1.jpg");
+  background-image: image-image-url("/img/Slide_layer_1.jpg");
   background-color: $background-transparent;
   background-position: top;
   background-repeat: no-repeat;
@@ -120,7 +120,7 @@ body {
 
 @media screen and (max-width: 767px) {
     #main-img{
-    	background-image: url("/img/alex_headshot-square_400px.png");
+    	background-image: image-url("/img/alex_headshot-square_400px.png");
       background-color: $background-transparent;
       background-position: top;
       background-repeat: no-repeat;
@@ -137,7 +137,7 @@ body {
 
 @media screen and (min-width: 768px) {
     #main-img{
-    	background-image: url("/img/about_bg_medium.png");
+    	background-image: image-url("/img/about_bg_medium.png");
       background-color: $background-transparent;
       background-position: top;
       background-repeat: no-repeat;
@@ -153,7 +153,7 @@ body {
 }
 @media (min-width: 992px) {
       #main-img{
-          background-image: url("/img/Slide_layer_1.jpg");
+          background-image: image-url("/img/Slide_layer_1.jpg");
           background-color: $background-transparent;
           background-position: top;
           background-repeat: no-repeat;
@@ -163,7 +163,7 @@ body {
             background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)),
             linear-gradient(to bottom, rgba(255,255,255,1), 0%, rgba(255,255,255,0)),
             linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)),
-            url("/img/Bg_teaching.png");
+            image-url("/img/Bg_teaching.png");
             background-color: $background-transparent;
             background-position: top;
             background-repeat: no-repeat;
@@ -174,12 +174,12 @@ body {
           background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)),
           linear-gradient(to bottom, rgba(255,255,255,1), 15%, rgba(255,255,255,0)),
           linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)),
-          url("/img/Bg_contact.png"),;
+          image-url("/img/Bg_contact.png"),;
           background-color: $background-transparent;
           background-position: top;
           background-repeat: no-repeat;
           background-size: cover;
-  min-height: 500px;
+          min-height: 500px;
 
         }
 }
@@ -193,7 +193,7 @@ body {
   background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)),
   linear-gradient(to bottom, rgba(255,255,255,1), 12%, rgba(255,255,255,0)),
   linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)),
-  url("/img/Bg_teaching.png"),;
+  image-url("img/Bg_teaching.png"),;
   background-color: $background-transparent;
   background-position: top;
   background-repeat: no-repeat;
