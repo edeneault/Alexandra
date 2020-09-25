@@ -47,7 +47,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('copyfonts', async function() {
-   gulp.src('./node_modules/font-awesome/fonts/**/*.{ttf,woff,eof,svg}*')
+   gulp.src('./node_modules/fort-awesome/fontawesome/webfonts/**/*.{ttf,woff,eof,svg}*')
    .pipe(gulp.dest('./dist/fonts'));
 });
 

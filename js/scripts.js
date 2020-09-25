@@ -98,3 +98,11 @@ $(document).ready(function () {
   }
   toggle_video_modal();
 });
+
+$(document).ready(function() {
+$(function() {
+  baguetteBox.run('.gallery-block', {
+
+  });
+});
+});
