@@ -3,16 +3,13 @@ $background-dark: rgba(0,0,0,0.80);
 $background-light: rgba(255,255,255,1.0);
 $background-pale: rgba(0,0,0,0.60);
 $background-transparent: rgba(0,0,0,0.0);
-// Height variables
 $carousel-item-height: 450px;
 $carousel-caption-color: rgba(0,0,0,0.80);
 $carousel-control-color: rgba(0,0,0,1.0);
-
-$grid-columns:      12;
+$grid-columns: 12;
 $grid-gutter-width: 30px;
-
-
-
+// Imports and mixin
+@import 'baguettebox.js/dist/baguetteBox.min.css';
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
   margin: 0 auto;
   padding: $pad-up-dn $pad-left-right;
@@ -32,19 +29,19 @@ $grid-gutter-width: 30px;
 .footer {
   @include zero-margin(20px, 0);
   background: $lt-gray;
-
 }
 
 .container {
   @include zero-margin(0px,0px)
 }
 
-
+// JUMBOTRON'S
 .jumbotron {
   @include zero-margin(50px,30px);
   background: $background-transparent;
   min-height: 430px;
   padding-bottom: 10px;
+
   img {
     border: 1px solid $carousel-caption-color;
     border-radius: 10px;
@@ -57,7 +54,6 @@ $grid-gutter-width: 30px;
   margin-bottom: 65px;
   font-size: 18px;
   text-transform: uppercase;
-
 }
 
 .jumbosmaller {
@@ -66,7 +62,6 @@ $grid-gutter-width: 30px;
   font-size: 18px;
 
   h2 {
-
     text-transform: uppercase;
     font-size: 22px;
   }
@@ -85,161 +80,111 @@ body {
   color: #666666;
 }
 
+// BACKGROUND Images and Media Inquiries
+
 .bg {
-  background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)),
-  linear-gradient(to bottom, rgba(255,255,255,1), 12%, rgba(255,255,255,0)),
-  linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)),
-  url("/img/rightjustifytest_5.png"),;
+  background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,1), 12%, rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)), url("../img/rightjustifytest_5.png"),;
   background-color: $background-transparent;
   background-position: top;
   background-repeat: no-repeat;
   background-size: auto;
 }
 
-.bg2{
-  background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)),
-  linear-gradient(to bottom, rgba(255,255,255,1), 50%, rgba(255,255,255,0)),
-  linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)),
-  url("/img/bg2_1.png"),;
+.bg2 {
+  background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,1), 50%, rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)), url("../img/bg2_1.png"),;
   background-color: $background-transparent;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: auto;
 }
 
-
 #main-img {
-  background-image: url("/img/Slide_layer_1.jpg");
+  background-image: url("/..img/Slide_layer_1.jpg");
   background-color: $background-transparent;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top:70px;
+  margin-top: 70px;
 }
-
-
 @media screen and (max-width: 767px) {
-    #main-img{
-    	background-image: url("/img/alex_headshot-square_400px.png");
-      background-color: $background-transparent;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    #bg-classes{
-      background-image: none;
-      background-color: $background-transparent;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-}
+  #main-img {
+    background-image: url("../img/alex_headshot-square_400px.png");
+    background-color: $background-transparent;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
+  #bg-classes {
+    background-image: none;
+    background-color: $background-transparent;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 @media screen and (min-width: 768px) {
-    #main-img{
-    	background-image: url("/img/about_bg_medium.png");
-      background-color: $background-transparent;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    #bg-classes{
-      background-image: none;
-      background-color: $background-transparent;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+  #main-img {
+    background-image: url("../img/about_bg_medium.png");
+    background-color: $background-transparent;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #bg-classes {
+    background-image: none;
+    background-color: $background-transparent;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 @media (min-width: 992px) {
-      #main-img{
-          background-image: url("/img/Slide_layer_1.jpg");
-          background-color: $background-transparent;
-          background-position: top;
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
-        #bg-classes{
-            background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)),
-            linear-gradient(to bottom, rgba(255,255,255,1), 0%, rgba(255,255,255,0)),
-            linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)),
-            url("/img/Bg_teaching.png");
-            background-color: $background-transparent;
-            background-position: top;
-            background-repeat: no-repeat;
-            background-size: cover;
+  #main-img {
+    background-image: url("../img/Slide_layer_1.jpg");
+    background-color: $background-transparent;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-        }
-        #bg-contact{
-          background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)),
-          linear-gradient(to bottom, rgba(255,255,255,1), 15%, rgba(255,255,255,0)),
-          linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)),
-          url("/img/Bg_contact.png"),;
-          background-color: $background-transparent;
-          background-position: top;
-          background-repeat: no-repeat;
-          background-size: cover;
-          min-height: 500px;
+  #bg-classes {
+    background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,1), 0%, rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)), url("../img/Bg_teaching.png");
+    background-color: $background-transparent;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-        }
+  #bg-contact {
+    background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,1), 15%, rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)), url("../img/Bg_contact.png"),;
+    background-color: $background-transparent;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+  }
 }
-// @media (min-width: 1200px) {
-//      #main-img{
-//          background-image: url("/img/Slide_layer_1.jpg");
-//      }
-// }
 
 #bg-classes {
-  background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)),
-  linear-gradient(to bottom, rgba(255,255,255,1), 12%, rgba(255,255,255,0)),
-  linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)),
-  url("/img/Bg_teaching.png"),;
+  background-image: linear-gradient(to top, rgba(255,255,255,1), 5%, rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,1), 12%, rgba(255,255,255,0)), linear-gradient(to bottom, rgba(255,255,255,0),100%, rgba(255,255,255,1)), url("../img/Bg_teaching.png"),;
   background-color: $background-transparent;
   background-position: top;
   background-repeat: no-repeat;
   background-size: original;
-  min-height:375px;
-  // @media screen and (max-width: 767px) {
-  //     #bg-classes{
-  //     	background-image: none;
-  //       background-color: $background-transparent;
-  //       background-position: top;
-  //       background-repeat: no-repeat;
-  //       background-size: cover;
-  //     }
-  // }
-  //
-  // @media screen and (min-width: 768px) {
-  //     #bg-classes{
-  //     	background-image: url("/img/about_bg_medium.png");
-  //       background-color: $background-transparent;
-  //       background-position: top;
-  //       background-repeat: no-repeat;
-  //       background-size: cover;
-  //     }
-  // }
-  // @media (min-width: 992px) {
-  //       #bg-classes{
-  //           background-image: url("/img/Slide_layer_1.jpg");
-  //           background-color: $background-transparent;
-  //           background-position: top;
-  //           background-repeat: no-repeat;
-  //           background-size: cover;
-  //
-  //       }
-
+  min-height: 375px;
 }
-
 
 #about {
-  margin-top:335px;
-
+  margin-top: 335px;
 }
 
+
+// CARD CSS
 .card {
   color: $carousel-control-color;
   width: 100%;
-
   padding-left: 10px;
   padding-right: 10px;
   border-color: $background-transparent;
@@ -251,55 +196,69 @@ body {
     border-radius: 10px;
     background-color: $carousel-caption-color;
   }
+
   .card-body {
     border-color: $background-transparent;
     background-color: $background-transparent;
   }
+
   p {
-      color: $background-dark;
-      font-size: 14px;
-      padding-bottom: 10px;
-
-  }
-  h2{
-      padding-top: 5px;
-      color: $background-dark;
-      font-size: 16px;
-      text-transform: uppercase;
-  }
-  h4{
-      color: $background-dark;
-      font-size: 14px;
-      text-transform: uppercase;
-  }
-  h6{
-      color: white;
-      font-size: 16px;
-      text-transform: uppercase;
-      margin-bottom: 0px;
-    }
-
+    color: $background-dark;
+    font-size: 14px;
+    padding-bottom: 10px;
   }
 
-// #cardborder {
-//     border: 1px solid $carousel-caption-color;
-// }
+  h2 {
+    padding-top: 5px;
+    color: $background-dark;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
 
-.style-1 { color: #D9534F; text-decoration:none;}
-.style-1:hover, .style-1:focus,.style-1:active, .style-1.active {
-    color: $carousel-caption-color;
-    text-decoration:none;
+  h4 {
+    color: $background-dark;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  h6 {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}
+
+// CUSTOM STYLE CLASSES
+
+.style-1 {
+  color: #D9534F;
+  text-decoration: none;
+}
+
+.style-1.active,
+.style-1:active,
+.style-1:focus,
+.style-1:hover {
+  color: $carousel-caption-color;
+  text-decoration: none;
 }
 
 .style-2 {
-    color: $carousel-control-color;
+  color: $carousel-control-color;
 }
-.style-2:hover, .style-2:focus,.style-2:active, .style-2.active , .open>.dropdown-toggle.style-2{
-    color: #666666 ;
-    text-decoration: none;
+
+.open > .dropdown-toggle.style-2,
+.style-2.active,
+.style-2:active,
+.style-2:focus,
+.style-2:hover {
+  color: #666666;
+  text-decoration: none;
 }
 
 
+// Navigation
 
 .navbar-light {
   min-height: 50px;
@@ -307,50 +266,58 @@ body {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
-.navbar-light,.navbar-toggler-icon {
+.navbar-light,
+.navbar-toggler-icon {
   color: $carousel-caption-color;
   border-color: $carousel-caption-color;
 }
 
-.nav-link  {
-    @include zero-margin(0px,0px);
-    padding: 15px, 0px,15px,0px;
-     color: $carousel-caption-color;
-}
-.nav-link:hover, .nav-link:focus, .nav-link:active, .nav-link.active, .open>.dropdown-toggle.nav-link {
-    color: $carousel-caption-color;
-    background-color: $background-transparent;
-    border-color: $carousel-caption-color; /*set the color you want here*/
+.nav-link {
+  @include zero-margin(0px,0px);
+  padding: 15px, 0;
+  color: $carousel-caption-color;
 }
 
+.nav-link.active,
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover,
+.open > .dropdown-toggle.nav-link {
+  color: $carousel-caption-color;
+  background-color: $background-transparent;
+  border-color: $carousel-caption-color;
+  /*set the color you want here*/
+}
 
-
-.navbar-text:hover, .navbar-text:focus, .navbar-text:active, .navbar-text.active, .open>.dropdown-toggle.navbar-text  button{
-    color: $carousel-caption-color;
-    // background-color: $background-transparent;
-    // border-color: $carousel-caption-color; /*set the color you want here*/
-    outline: none;
-    box-shadow: none;
+.navbar-text.active,
+.navbar-text:active,
+.navbar-text:focus,
+.navbar-text:hover,
+.open > .dropdown-toggle.navbar-text button {
+  color: $carousel-caption-color;
+  // background-color: $background-transparent;
+  // border-color: $carousel-caption-color; /*set the color you want here*/
+  outline: none;
+  box-shadow: none;
 }
 
 .navbar-text {
   background-color: $background-transparent;
-
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  border: 0px;
-  button {
-    margin: 0px;
-    border-color: $background-transparent;
-    border: 0px;
-  }
-  // margin-bottom:10px;
-}
+  border: 0;
 
+  button {
+    margin: 0;
+    border-color: $background-transparent;
+    border: 0;
+  }
+
+}
 
 .tab-content {
   border-left: 1px solid $lt-gray;
@@ -359,11 +326,13 @@ body {
   padding: 10px;
 }
 
+// CAROUSEL STYLING
 .carousel {
   background: $background-transparent;
   // border: 1px solid $lt-gray;
   .carousel-item {
     height: $carousel-item-height;
+
     img {
       position: absolute;
       top: 0;
@@ -372,29 +341,31 @@ body {
       border: 1px solid #666666;
       border-radius: 10px;
     }
-    h2{
+
+    h2 {
       text-transform: uppercase;
-        font-size: 16px;
+      font-size: 16px;
     }
-    h4{
 
-        color: $carousel-control-color;
-        font-size: 20px;
+    h4 {
+      color: $carousel-control-color;
+      font-size: 20px;
     }
-    h6{
-        text-transform: uppercase;
-        color: $carousel-caption-color;
-        font-size: 18px;
+
+    h6 {
+      text-transform: uppercase;
+      color: $carousel-caption-color;
+      font-size: 18px;
     }
+
     p {
-        color: $background-dark;
-        font-size: 14px;
-        padding-bottom: 10px;
-
+      color: $background-dark;
+      font-size: 14px;
+      padding-bottom: 10px;
     }
-
   }
 }
+
 .carousel-caption {
   color: $carousel-caption-color;
   position: absolute;
@@ -402,26 +373,26 @@ body {
   right: 0;
   min-height: 200px;
 
-  .carouseldark h2{
+  .carouseldark h2 {
     color: $background-light;
   }
-  .carouseldark h4{
+
+  .carouseldark h4 {
     color: $background-light;
   }
 }
-
 // .carousel-caption h2 {
 //   color: #000;
 //   font-style: normal;
 // }
 
-
 .carousel .carousel-indicators li {
-    background-color: #444;
-  }
+  background-color: #444;
+}
+
 .carousel .carousel-indicators ol {
-    margin-bottom:0
-  }
+  margin-bottom: 0;
+}
 
 .carousel .carousel-indicators .active {
   background-color: #000;
@@ -430,16 +401,18 @@ body {
 .carousel-control-color {
   color: $carousel-control-color;
 }
+
 .carouseldark h2 {
   color: $background-light;
 }
+
 .carouseldark h4 {
   color: $background-light;
 }
 
 #mycarousel {
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
   color: black;
 }
 
@@ -450,18 +423,19 @@ body {
   z-index: 1;
   background-color: rgba(0,0,0,0);
 }
+
 #carouseldarkbg {
   color: $background-light;
 }
+
+
+// LOGIN MODAL STYLING
 
 .modal-header {
   background-color: $lt-gray;
   color: $background-light;
 }
 
-// .modal-body {
-//   background-color: #edf6fc;
-// }
 
 #modalLogin {
   right: 8%;
@@ -470,20 +444,9 @@ body {
   z-index: 1;
 }
 
-// .modal-dialog {
-//   min-height: calc(100vh - 60px);
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   overflow: auto;
-//   @media(max-width: 400px) {
-//     min-height: calc(100vh - 20px);
-//   }
-// }
-
 .modal-backdrop {
-    /* bug fix - no overlay */
-    display: none;
+  /* bug fix - no overlay */
+  display: none;
 }
 
 .close {
@@ -491,20 +454,24 @@ body {
   opacity: 1;
 }
 
-.close:hover, .close:focus, .close:active, .close.active, .open>.dropdown-toggle.close {
-    color: $lt-gray;
-    background-color: $background-transparent;
-    border-color: $background-transparent;
+.close.active,
+.close:active,
+.close:focus,
+.close:hover,
+.open > .dropdown-toggle.close {
+  color: $lt-gray;
+  background-color: $background-transparent;
+  border-color: $background-transparent;
 }
 
+// BREADCRUMB STYLING (made a nice one but didn't use it)
 
 .breadcrumb-item + .breadcrumb-item::before {
   font-family: 'FontAwesome';
   content: "\f101" !important;
+}
 
-  }
-
-.breadcrumb{
+.breadcrumb {
   @include zero-margin(0px,0px);
   // border: 1px solid #666666;
   background-color: $background-transparent;
@@ -516,23 +483,25 @@ body {
 }
 
 .breadcrumb-item:hover a {
-   color:  #bbb;
-   text-decoration: none;
+  color: #bbb;
+  text-decoration: none;
 }
 
-.breadcrumb-item:active  a {
-    color: $carousel-caption-color;
-    text-decoration: none;
-  }
+.breadcrumb-item:active a {
+  color: $carousel-caption-color;
+  text-decoration: none;
+}
+
 .breadcrumb-item h6 {
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .btn-group {
   @include zero-margin(0px,0px);
   // border: 1px solid #666666;
   background-color: $background-transparent;
+
   a {
     @include zero-margin(0px,0px);
   }
@@ -543,143 +512,211 @@ body {
   color: $carousel-control-color;
 }
 
+// FOOTER-CSS
+
 .footer-bs {
-    background-color: $background-transparent;
-	padding: 50px 40px;
-	color: $carousel-control-color;
-	margin-bottom: 20px;
-	border-bottom-right-radius: 6px;
-	border-top-left-radius: 0px;
-	border-bottom-left-radius: 6px;
+  background-color: $background-transparent;
+  padding: 50px 40px;
+  color: $carousel-control-color;
+  margin-bottom: 20px;
+  border-bottom-right-radius: 6px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 6px;
 }
-.footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
-.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
-.footer-bs .footer-brand h2 { margin:0px 0px 10px; }
-.footer-bs .footer-brand p { font-size:14px; color:$carousel-control-color; }
 
-.footer-bs .footer-nav ul.pages { list-style:none; padding:0px; }
-.footer-bs .footer-nav ul.pages li { padding:5px 0px;}
-.footer-bs .footer-nav ul.pages a { color:rgba(0,0,0,0.80); font-weight:bold; text-transform:uppercase; }
-.footer-bs .footer-nav ul.pages a:hover { color:rgba(0,0,0,0.60); text-decoration:none; }
+.footer-bs .footer-brand,
+.footer-bs .footer-nav,
+.footer-bs .footer-ns,
+.footer-bs .footer-social {
+  padding: 10px 25px;
+}
+
+.footer-bs .footer-nav,
+.footer-bs .footer-ns,
+.footer-bs .footer-social {
+  border-color: transparent;
+}
+
+.footer-bs .footer-brand h2 {
+  margin: 0 0 10px;
+}
+
+.footer-bs .footer-brand p {
+  font-size: 14px;
+  color: $carousel-control-color;
+}
+
+.footer-bs .footer-nav ul.pages {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-bs .footer-nav ul.pages li {
+  padding: 5px 0;
+}
+
+.footer-bs .footer-nav ul.pages a {
+  color: rgba(0,0,0,0.80);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer-bs .footer-nav ul.pages a:hover {
+  color: rgba(0,0,0,0.60);
+  text-decoration: none;
+}
+
 .footer-bs .footer-nav h4 {
-	font-size: 11px;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	margin-bottom:10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
 }
 
-.footer-bs .footer-nav ul.list { list-style:none; padding:0px; }
-.footer-bs .footer-nav ul.list li { padding:5px 0px;}
-.footer-bs .footer-nav ul.list a { color:rgba(0,0,0,0.80); }
-.footer-bs .footer-nav ul.list a:hover { color:rgba(0,0,0,0.60); text-decoration:none; }
+.footer-bs .footer-nav ul.list {
+  list-style: none;
+  padding: 0;
+}
 
-.footer-bs .footer-social ul { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.list li {
+  padding: 5px 0;
+}
+
+.footer-bs .footer-nav ul.list a {
+  color: rgba(0,0,0,0.80);
+}
+
+.footer-bs .footer-nav ul.list a:hover {
+  color: rgba(0,0,0,0.60);
+  text-decoration: none;
+}
+
+.footer-bs .footer-social ul {
+  list-style: none;
+  padding: 0;
+}
+
 .footer-bs .footer-social h4 {
-	font-size: 11px;
-	text-transform: uppercase;
-	letter-spacing: 3px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
-.footer-bs .footer-social li { padding:5px 0px;}
-.footer-bs .footer-social a { color:rgba(0,0,0,1.00);}
-.footer-bs .footer-social a:hover { color:rgba(0,0,0,0.60); text-decoration:none; }
+
+.footer-bs .footer-social li {
+  padding: 5px 0;
+}
+
+.footer-bs .footer-social a {
+  color: rgba(0,0,0,1.00);
+}
+
+.footer-bs .footer-social a:hover {
+  color: rgba(0,0,0,0.60);
+  text-decoration: none;
+}
 
 .footer-bs .footer-ns h4 {
-	font-size: 11px;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	margin-bottom:10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
 }
-.footer-bs .footer-ns p { font-size:12px; color:rgba(0,0,0,0.70); }
 
+.footer-bs .footer-ns p {
+  font-size: 12px;
+  color: rgba(0,0,0,0.70);
+}
 @media (min-width: 768px) {
-	.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
+  .footer-bs .footer-nav,
+  .footer-bs .footer-ns,
+  .footer-bs .footer-social {
+    border-left: solid 1px rgba(255,255,255,0.10);
+  }
 }
 
 // GALLERY CSS
-.gallery-block{
+
+.gallery-block {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.gallery-block .heading{
-    margin-bottom: 40px;
-    text-align: center;
+.gallery-block .heading {
+  margin-bottom: 40px;
+  text-align: center;
 }
 
-.gallery-block .heading h2{
-    color: $background-dark;
-    font-size: 16px;
-    text-transform: uppercase;
+.gallery-block .heading h2 {
+  color: $background-dark;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
-.gallery-block .heading h4{
-    color: $background-dark;
-    font-size: 14px;
-    text-transform: uppercase;
-}
-.gallery-block .heading h6{
-    color: white;
-    font-size: 16px;
-    text-transform: uppercase;
-    margin-bottom: 0px;
-
+.gallery-block .heading h4 {
+  color: $background-dark;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
-.gallery-block.compact-gallery .item{
+.gallery-block .heading h6 {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.gallery-block.compact-gallery .item {
   overflow: hidden;
   margin-bottom: 0;
   background: black;
   opacity: 1;
 }
 
-.gallery-block.compact-gallery .item .image{
+.gallery-block.compact-gallery .item .image {
   transition: 0.8s ease;
-
 }
 
-.gallery-block.compact-gallery .item .info{
+.gallery-block.compact-gallery .item .info {
   position: relative;
-    display: inline-block;
+  display: inline-block;
 }
 
-.gallery-block.compact-gallery .item .video-banner-img{
+.gallery-block.compact-gallery .item .video-banner-img {
   position: relative;
-    display: inline-block;
+  display: inline-block;
 }
 
-.gallery-block.compact-gallery .item .description{
+.gallery-block.compact-gallery .item .description {
   display: grid;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    color: #fff;
-    padding: 10px;
-    font-size: 17px;
-    line-height: 18px;
-    width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    opacity: 1;
-    color: #fff;
-    transition: 0.8s ease;
-    text-align: center;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.39));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  padding: 10px;
+  font-size: 17px;
+  line-height: 18px;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  opacity: 1;
+  color: #fff;
+  transition: 0.8s ease;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.39));
 }
 
-.gallery-block.compact-gallery .item .description .description-heading{
+.gallery-block.compact-gallery .item .description .description-heading {
   font-size: 1em;
   font-weight: bold;
 }
 
-.gallery-block.compact-gallery .item .description .description-body{
+.gallery-block.compact-gallery .item .description .description-body {
   font-size: 0.8em;
   margin-top: 10px;
   font-weight: 300;
 }
-
 @media (min-width: 576px) {
-
   .gallery-block.compact-gallery .item .description {
     opacity: 0;
   }
@@ -693,7 +730,6 @@ body {
     opacity: 0.7;
   }
 }
-
 
 .video-modal,
 .video-modal .overlay {
@@ -709,27 +745,21 @@ body {
   overflow: hidden;
   position: fixed;
   opacity: 0;
-
   -webkit-transform: translate(500%, 0%);
   transform: translate(500%, 0%);
-
   -webkit-transition: -webkit-transform 0s linear 0s;
   transition: transform 0s linear 0s;
-
   /* using flexbox for vertical centering */
-
   /* Flexbox display */
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-
   /* Vertical alignment */
   -webkit-box-align: center;
   -moz-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -740,9 +770,7 @@ body {
   // background: rgba(13, 1, 61, 0.82);
   background: rgba(0, 0, 0, 0.7);
   /* overlay color */
-
   opacity: 0;
-
   -webkit-transition: opacity 0.2s ease-out 0.05s;
   transition: opacity 0.2s ease-out 0.05s;
 }
@@ -754,19 +782,14 @@ body {
   bottom: auto;
   left: auto;
   z-index: 1;
-
   margin: 0 auto;
-
   overflow-y: visible;
-
   background: #000;
-
   width: calc(100% - 12em);
   height: 0;
   padding-top: calc((100% - 12em) * 0.5625);
   /* 16:9 calc */
 }
-
 /* Scaling to fit within the current Viewport size:
    When viewport aspect ratio is greater than 16:9
    work off the height instead of the width for calc */
@@ -779,7 +802,6 @@ body {
     /* 16:9 calc */
   }
 }
-
 /* Mobile Layout Tweaks - side margins reduced */
 @media (max-width: 640px) {
   .video-modal-content {
@@ -788,20 +810,17 @@ body {
     /* 16:9 calc */
   }
 }
-
 /* modal close button */
 .close-video-modal {
   display: block;
   position: absolute;
   left: 0;
   top: -40px;
-
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
 }
-
 /* set the iframe element to stretch to fit its parent element */
 iframe#youtube {
   position: absolute;
@@ -810,16 +829,13 @@ iframe#youtube {
   bottom: 0;
   left: 0;
   z-index: 1;
-
   background: #000;
-  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
 }
-
 /* show the modal:
    add class to the body to reveal */
 .show-video-modal .video-modal {
   opacity: 1;
-
   transform: translate(0%, 0%);
   -webkit-transform: translate(0%, 0%);
 }
@@ -832,7 +848,6 @@ iframe#youtube {
   transform: translate(0%, 0%);
   -webkit-transform: translate(0%, 0%);
 }
-
 /* PLAY BUTTON OVERLAY */
 .video-gallery {
   margin-bottom: 25px;
@@ -865,8 +880,8 @@ iframe#youtube {
       top: 50%;
       transform: translate(-50%, -50%);
     }
+  }
 
-}
   a:hover {
     text-decoration: none;
 
@@ -875,7 +890,6 @@ iframe#youtube {
       opacity: 1;
       transition: 0.3s;
       background: $background-pale;
-
     }
   }
 
@@ -884,7 +898,6 @@ iframe#youtube {
     color: #FFF;
     padding: 10px;
   }
-
   @media (max-width: 767px) {
     .video-thumb {
       display: flex;
@@ -892,6 +905,7 @@ iframe#youtube {
       .wrapper {
         // flex-grow: 1;
         flex-basis: 40%;
+
         .video-banner-img {
           width: 100%;
         }
@@ -903,10 +917,4 @@ iframe#youtube {
       }
     }
   }
-
-// Optional - For equal height of card for 2 line video name
-  // @media (min-width: 768px) {
-  //   .video-name {
-  //     height: 65px;
-  //   }
-  // }
+}
